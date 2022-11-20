@@ -1,35 +1,9 @@
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Medium.woff2") format("woff2"), url("SFProDisplay-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Bold.woff2") format("woff2"), url("SFProDisplay-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Regular.woff2") format("woff2"), url("SFProDisplay-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Semibold.woff2") format("woff2"), url("SFProDisplay-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 * {
   list-style-type: none;
   text-decoration: none;
   margin: 0;
+  font-family: "SF Pro Display";
   padding: 0;
   box-sizing: border-box;
 }
@@ -47,12 +21,218 @@ body {
 }
 
 .main-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 30px 0;
-  background-color: rgba(255, 255, 255, 0.337254902);
+  z-index: 10;
+  padding: 20px 0;
 }
 .main-header .header .logo {
   max-width: 130px;
+}
+
+.hero {
+  color: #000000;
+  font-family: "SF Pro Display";
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media only screen and (max-width: 576px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+}
+.hero-content {
+  width: 60%;
+}
+.hero-content::before {
+  content: "";
+  background: url(../../images/abstract-hero.png) no-repeat center;
+  background-size: contain;
+  width: 140px;
+  position: absolute;
+  top: -60px;
+  right: 28%;
+  height: 140px;
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+  .hero-content::before {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-content::before {
+    top: 200px;
+    right: 0;
+  }
+}
+.hero-content::after {
+  content: "";
+  background: url(../../images/abstract-hero-s.png) no-repeat center;
+  width: 140px;
+  background-size: contain;
+  position: absolute;
+  bottom: -150px;
+  left: -110px;
+  height: 140px;
+  display: inline-block;
+}
+@media only screen and (max-width: 992px) {
+  .hero-content::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-content::after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-content::after {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: 300px;
+    bottom: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-content {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-content {
+    width: 100%;
+  }
+}
+.hero__title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 95px;
+  letter-spacing: -0.02em;
+}
+@media only screen and (max-width: 992px) {
+  .hero__title {
+    font-size: 65px;
+    line-height: 82px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+.hero__description {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 24px 0 69px;
+}
+@media only screen and (max-width: 992px) {
+  .hero__description {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 20px 0 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero__description {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 15px 0 30px;
+  }
+}
+.hero__link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background: #0F0F54;
+  border-radius: 8px;
+  padding: 18px 40px;
+  display: inline-block;
+  letter-spacing: -0.01em;
+}
+.hero-image {
+  background: url(../../images/hero-image.png) no-repeat center;
+  width: 45%;
+  height: 650px;
+  position: absolute;
+  top: -70px;
+  right: 0;
+  background-size: contain;
+}
+.hero-image::after {
+  content: "";
+  background: url(../../images/abstract-hero-3.png) no-repeat center;
+  width: 140px;
+  position: absolute;
+  background-size: contain;
+  bottom: 0;
+  right: 15px;
+  height: 140px;
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+  .hero-image::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-image::after {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-image {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-image {
+    position: static;
+    width: 100%;
+  }
+}
+
+.about {
+  margin-top: 260px;
+  position: relative;
+}
+.about::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #000000;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.about .player-thumb {
+  width: 100%;
+  height: auto;
+}
+.about .player {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 70px;
+  height: 70px;
+}
+@media only screen and (max-width: 768px) {
+  .about .player {
+    width: 50px;
+    height: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */

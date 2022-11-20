@@ -1,0 +1,164 @@
+.hero {
+  color: $black;
+  font-family: "SF Pro Display";
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column-reverse;
+  }
+
+  &-content {
+    width: 60%;
+
+    &::before {
+      content: "";
+      background: url(../../images/abstract-hero.png) no-repeat center;
+      background-size: contain;
+      width: 140px;
+      position: absolute;
+      top: -60px;
+      right: 28%;
+      height: 140px;
+      display: inline-block;
+
+      @media only screen and (max-width: $tablet) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        top: 200px;
+        right: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      background: url(../../images/abstract-hero-s.png) no-repeat center;
+      width: 140px;
+      background-size: contain;
+      position: absolute;
+      bottom: -150px;
+      left: -110px;
+      height: 140px;
+      display: inline-block;
+
+      @media only screen and (max-width: $tablet-l) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        left: 0;
+        top: 300px;
+        bottom: auto;
+      }
+    }
+
+    @media only screen and (max-width: $tablet) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 95px;
+    letter-spacing: -0.02em;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 65px;
+      line-height: 82px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 24px 0 69px;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 22px;
+      line-height: 30px;
+      margin: 20px 0 60px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 15px 0 30px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+    background: $blue;
+    border-radius: 8px;
+    padding: 18px 40px;
+    display: inline-block;
+    letter-spacing: -0.01em;
+  }
+
+  &-image {
+    background: url(../../images/hero-image.png) no-repeat center;
+    width: 45%;
+    height: 650px;
+    position: absolute;
+    top: -70px;
+    right: 0;
+    background-size: contain;
+
+    &::after {
+      content: "";
+      background: url(../../images/abstract-hero-3.png) no-repeat center;
+      width: 140px;
+      position: absolute;
+      background-size: contain;
+      bottom: 0;
+      right: 15px;
+      height: 140px;
+      display: inline-block;
+
+      @media only screen and (max-width: $tablet) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    @media only screen and (max-width: $tablet) {
+      width: 55%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      position: static;
+      width: 100%;
+    }
+  }
+}
