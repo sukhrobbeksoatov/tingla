@@ -46,5 +46,12 @@
 
 body {
   font-family: "SF Pro Display";
-  
+  background: url(../../images/desktop-line.png) no-repeat center;
+  height: 100vh;
+}
+
+.container {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 15px;
 }

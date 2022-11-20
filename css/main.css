@@ -1,1 +1,58 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SFProDisplay-Medium.woff2") format("woff2"), url("SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SFProDisplay-Bold.woff2") format("woff2"), url("SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SFProDisplay-Regular.woff2") format("woff2"), url("SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SFProDisplay-Semibold.woff2") format("woff2"), url("SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display";
+  background: url(../../images/desktop-line.png) no-repeat center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  background-color: rgba(255, 255, 255, 0.337254902);
+}
+.main-header .header .logo {
+  max-width: 130px;
+}/*# sourceMappingURL=main.css.map */

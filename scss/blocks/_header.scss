@@ -1,0 +1,12 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  background-color: $half-white;
+  .header {
+
+    .logo {
+      max-width: 130px;
+    }
+  }
+}
