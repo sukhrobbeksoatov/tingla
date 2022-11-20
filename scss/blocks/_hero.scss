@@ -87,8 +87,8 @@
     }
 
     @media only screen and (max-width: $tablet) {
-      font-size: 60px;
-      line-height: 70px;
+      font-size: 45px;
+      line-height: 60px;
     }
   }
 
@@ -108,6 +108,16 @@
       font-size: 20px;
       line-height: 26px;
       margin: 15px 0 30px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 15px 0 30px;
+
+      br {
+        display: none;
+      }
     }
   }
 

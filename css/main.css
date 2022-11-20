@@ -130,8 +130,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .hero__title {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 45px;
+    line-height: 60px;
   }
 }
 .hero__description {
@@ -152,6 +152,16 @@ body {
     font-size: 20px;
     line-height: 26px;
     margin: 15px 0 30px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__description {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 15px 0 30px;
+  }
+  .hero__description br {
+    display: none;
   }
 }
 .hero__link {
@@ -212,6 +222,16 @@ body {
 .about {
   margin-top: 260px;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    margin-top: 220px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .about {
+    margin-top: 20px;
+  }
 }
 .about::after {
   content: "";
