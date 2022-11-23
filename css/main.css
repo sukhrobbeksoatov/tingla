@@ -40,6 +40,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  margin-top: 100px;
 }
 @media only screen and (max-width: 576px) {
   .hero {
@@ -53,11 +54,12 @@ body {
   content: "";
   background: url(../../images/abstract-hero.png) no-repeat center;
   background-size: contain;
-  width: 140px;
+  width: 160px;
   position: absolute;
-  top: -60px;
+  z-index: 1;
+  top: -195px;
   right: 28%;
-  height: 140px;
+  height: 160px;
   display: inline-block;
 }
 @media only screen and (max-width: 768px) {
@@ -70,8 +72,8 @@ body {
   .hero-content::before {
     top: 250px;
     right: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 }
 .hero-content::after {
@@ -104,6 +106,11 @@ body {
     left: -10px;
     top: 300px;
     bottom: auto;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hero-content {
+    width: 54%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -177,11 +184,12 @@ body {
 }
 .hero-image {
   background: url(../../images/hero-image.png) no-repeat center;
-  width: 45%;
-  height: 650px;
+  width: 50%;
+  height: 700px;
   position: absolute;
-  top: -70px;
-  right: 0;
+  top: -170px;
+  z-index: 2;
+  right: -15px;
   background-size: contain;
 }
 .hero-image::after {
@@ -203,8 +211,8 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .hero-image::after {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -219,21 +227,21 @@ body {
   }
 }
 
-.about {
+.trailer {
   margin-top: 260px;
   position: relative;
 }
 @media only screen and (max-width: 768px) {
-  .about {
+  .trailer {
     margin-top: 220px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .about {
+  .trailer {
     margin-top: 120px;
   }
 }
-.about::after {
+.trailer::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -245,11 +253,11 @@ body {
   top: 0;
   left: 0;
 }
-.about .player-thumb {
+.trailer .player-thumb {
   width: 100%;
   height: auto;
 }
-.about .player {
+.trailer .player {
   position: absolute;
   left: 50%;
   z-index: 3;
@@ -259,8 +267,74 @@ body {
   height: 70px;
 }
 @media only screen and (max-width: 768px) {
-  .about .player {
+  .trailer .player {
     width: 50px;
     height: 50px;
+  }
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 360px;
+  padding: 126px 27px 126px 80px;
+  background-color: #0F0F54;
+  color: #FFFFFF;
+  font-family: "SF Pro Display";
+  position: relative;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .about {
+    padding: 110px 12px 110px 60px;
+  }
+}
+.about-content {
+  width: 55%;
+}
+@media only screen and (max-width: 992px) {
+  .about-content {
+    width: 48%;
+  }
+}
+.about__title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+}
+@media only screen and (max-width: 992px) {
+  .about__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about__title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+.about__description {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 992px) {
+  .about__description {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
+.about__img {
+  position: absolute;
+  top: -170px;
+  right: -15px;
+  max-width: 470px;
+}
+@media only screen and (max-width: 992px) {
+  .about__img {
+    max-width: 440px;
   }
 }/*# sourceMappingURL=main.css.map */

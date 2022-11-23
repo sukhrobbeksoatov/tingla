@@ -1,0 +1,45 @@
+.trailer {
+  margin-top: 260px;
+  position: relative;
+
+  @media only screen and (max-width: $tablet) {
+    margin-top: 220px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-top: 120px;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: $black;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
+  .player-thumb {
+    width: 100%;
+    height: auto;
+  }
+
+  .player {
+    position: absolute;
+    left: 50%;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 70px;
+    height: 70px;
+
+    @media only screen and (max-width: $tablet) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
