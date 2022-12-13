@@ -1,32 +1,18 @@
-// let firstName = "Suhrob"
-// let lastName = "Soatov"
-// let fullName = firstName + " " + lastName
-// console.log(fullName)
-// Matn yoki so'zning uzunligini o'lchaydi
-// console.log(fullName.length)
-// Aynan shu pozitsiyada qaysi harf turganini ko'rsatadi
-// console.log(fullName[2])
+// var elHeader = document.querySelector(".main-header");
 
-// harflarni katta yoki kichik qilib beradi
-let katta = fullName.toUpperCase()
-let kichik = fullName.toLowerCase()
-console.log(katta)
-console.log(kichik)
-
-// Qaysi harf qaysi pozitsiyada ekanligini ko'rsatadi
-let index1 = fullName.indexOf("S")
-let index2 = fullName.lastIndexOf("S")
-console.log(index1)
-console.log(index2)
-
-// Kerakli joydan bosh kerakli joygacha kesib beradi
-let half = fullName.slice(0,3)
-console.log(half)
-
-// Kerakli joydan boshlab keraklicha harfni kesib beradi
-let half2 = fullName.substr(0, 2)
-console.log(half2)
-
-// Tanlangan harffni o'zgartirib beradi
-let change = fullName.replace("S", "d")
-console.log(change)
+// elHeader.style.backgroundColor = "transparent";
+// window.addEventListener("scroll", function () {
+//   if (this.pageYOffset >= 100) {
+//     elHeader.style.position = "sticky";
+//     elHeader.style.top = "0";
+//     elHeader.style.paddingTop = "30px";
+//     elHeader.style.paddingBottom = "30px";
+//     elHeader.style.backgroundColor = "rgba(255,255,255, 0.87)";
+//     elHeader.style.backDropFilter = "blur(15px)";
+//   } else {
+//     elHeader.style.paddingTop = "60px";
+//     elHeader.style.paddingBottom = "60px";
+//     elHeader.style.BackgroundColor = "transparent";
+//     elHeader.style.backDropFilter = "none";
+//   }
+// });
