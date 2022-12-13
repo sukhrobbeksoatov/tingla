@@ -1,0 +1,122 @@
+.features-section {
+  margin-top: 200px;
+
+  @media only screen and (max-width: $tablet-l) {
+    margin-top: 150px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    margin-top: 100px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-top: 50px;
+  }
+
+  .features {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 125px;
+      position: absolute;
+      height: 125px;
+      background: url(../../images/abstract-features.png) no-repeat center;
+      bottom: -50px;
+      background-size: contain;
+
+      @media only screen and (max-width: $tablet-l) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        width: 75px;
+        height: 75px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    &-content {
+      width: 50%;
+
+      @media only screen and (max-width: $tablet-l) {
+        width: 45%;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        width: 45%;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 1.2;
+      margin-bottom: 30px;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 44px;
+        margin-bottom: 26px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 34px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 500;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 18px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 17px;
+      }
+    }
+
+    &-image {
+      width: 50%;
+
+      @media only screen and (max-width: $tablet-l) {
+        width: 55%;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        width: 55%;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        width: 90%;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+    }
+  }
+}

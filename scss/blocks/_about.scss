@@ -10,6 +10,24 @@
   position: relative;
   border-radius: 20px;
 
+  @media only screen and (max-width: $tablet-l) {
+    padding: 110px 12px 110px 60px;
+    margin-top: 300px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    padding: 0px 40px 40px;
+    margin-top: 200px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0px 15px 0;
+    margin-top: 150px;
+    gap: 30px;
+    text-align: center;
+  }
+
   &::before {
     content: "";
     background: url(../../images/abstract-hero.png) no-repeat center;
@@ -35,19 +53,6 @@
     }
   }
 
-  @media only screen and (max-width: $tablet-l) {
-    padding: 110px 12px 110px 60px;
-  }
-
-  @media only screen and (max-width: $tablet) {
-    flex-direction: column-reverse;
-    padding: 0px 40px 40px;
-  }
-
-  @media only screen and (max-width: $mobile) {
-    padding: 0px 15px 30px;
-  }
-
   &-content {
     width: 55%;
 
@@ -57,6 +62,12 @@
 
     @media only screen and (max-width: $tablet) {
       width: 100%;
+      transform: translateY(-100px);
+    }
+
+    @media only screen and (max-width: $mobile) {
+      text-align: center;
+      // transform: translateY(0);
     }
   }
 
@@ -89,7 +100,12 @@
   }
 
   &-image {
-    width: 100%;
+    width: 50%;
+
+    @media only screen and (max-width: $tablet) {
+      margin: 0 auto;
+      width: 80%;
+    }
   }
 
   &__img {
