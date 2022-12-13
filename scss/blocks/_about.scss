@@ -25,6 +25,33 @@
 
     &--payments {
       background-color: $light;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        background: url(../../images/abstract-hero-3.png) no-repeat center;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: -250px;
+        right: 0;
+
+        @media only screen and (max-width: $tablet-l) {
+          width: 75px;
+          height: 75px;
+          bottom: -200px;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          bottom: -105px;
+          left: 0;
+        }
+      }
     }
 
     &--payments.about {
