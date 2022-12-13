@@ -87,17 +87,18 @@
   &__title {
     font-weight: 700;
     font-size: 80px;
-    line-height: 95px;
     letter-spacing: -0.02em;
 
     @media only screen and (max-width: $tablet-l) {
       font-size: 65px;
-      line-height: 82px;
     }
 
     @media only screen and (max-width: $tablet) {
       font-size: 45px;
-      line-height: 60px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 32px;
     }
   }
 
@@ -140,6 +141,11 @@
     padding: 18px 40px;
     display: inline-block;
     letter-spacing: -0.01em;
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 16px;
+      padding: 10px 30px;
+    }
   }
 
   &-image {

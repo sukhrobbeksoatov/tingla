@@ -156,19 +156,21 @@ body {
 .hero__title {
   font-weight: 700;
   font-size: 80px;
-  line-height: 95px;
   letter-spacing: -0.02em;
 }
 @media only screen and (max-width: 992px) {
   .hero__title {
     font-size: 65px;
-    line-height: 82px;
   }
 }
 @media only screen and (max-width: 768px) {
   .hero__title {
     font-size: 45px;
-    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__title {
+    font-size: 32px;
   }
 }
 .hero__description {
@@ -211,6 +213,12 @@ body {
   padding: 18px 40px;
   display: inline-block;
   letter-spacing: -0.01em;
+}
+@media only screen and (max-width: 576px) {
+  .hero__link {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
 }
 .hero-image {
   background: url(../../images/hero-image.png) no-repeat center;
@@ -291,7 +299,7 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .trailer {
-    margin-top: 60px;
+    margin-top: 110px;
   }
 }
 .trailer .player-thumb {
