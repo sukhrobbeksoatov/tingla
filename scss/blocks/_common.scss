@@ -45,10 +45,15 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline-offset: 3px;
+  outline: 2px dotted $black;
+}
+
 body {
   font-family: "SF Pro Display";
   background: url(../../images/desktop-line.png) no-repeat center;
-  height: 100vh;
+  height: 200vh;
   overflow-x: hidden;
 
   @media only screen and (max-width: $mobile) {
