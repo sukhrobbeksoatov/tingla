@@ -1,122 +1,140 @@
-.features-section {
-  margin-top: 300px;
-
+.features {
+  padding-top: 220px;
+  
+  @media only screen and (max-width: $desktop) {
+    padding-top: 190px;
+  }
+  
   @media only screen and (max-width: $tablet-l) {
-    margin-top: 250px;
+    padding-top: 140px;
   }
-
+  
   @media only screen and (max-width: $tablet) {
-    margin-top: 200px;
+    padding-top: 100px;
   }
-
+  
   @media only screen and (max-width: $mobile) {
-    margin-top: 150px;
+    padding-top: 70px;
   }
+}
 
-  .features {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: space-between;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 125px;
-      position: absolute;
-      height: 125px;
-      background: url(../../images/abstract-features.png) no-repeat center;
-      bottom: -50px;
-      background-size: contain;
-
-      @media only screen and (max-width: $tablet-l) {
-        width: 100px;
-        height: 100px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        width: 75px;
-        height: 75px;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        display: none;
-      }
+.features__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url("../images/pattern.svg") no-repeat center / contain;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transform: translateY(70%);
+    
+    @media only screen and (max-width: $tablet) {
+      width: 50px;
+      height: 50px;
+      top: -60px;
+      right: 0;
+      bottom: auto;
+      left: auto;
     }
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
 
-    @media only screen and (max-width: $mobile) {
-      flex-direction: column;
-      justify-content: center;
-      gap: 40px;
-    }
+.features__img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  
+  @media only screen and (max-width: 1360px) {
+    max-width: 570px;
+  }
+  
+  @media only screen and (max-width: $desktop) {
+    max-width: 430px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 400px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
 
-    &-content {
-      width: 50%;
+.features__content {
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  right: -90px;
+  background: url("../../images/hero-lighten-bg.svg") no-repeat center / 480px;
+  
+  @media only screen and (max-width: 1360px) {
+    right: 0;
+  }
+  
+  @media only screen and (max-width: $desktop) {
+    position: static;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    max-width: 100%;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+  }
+}
 
-      @media only screen and (max-width: $tablet-l) {
-        width: 45%;
-      }
+.features__title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 30px;
+  letter-spacing: -1%;
+  
+  @media only screen and (max-width: $desktop) {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
 
-      @media only screen and (max-width: $tablet) {
-        width: 45%;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    &__title {
-      font-size: 50px;
-      line-height: 1.2;
-      margin-bottom: 30px;
-
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 44px;
-        margin-bottom: 26px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 34px;
-        margin-bottom: 20px;
-      }
-    }
-
-    &__description {
-      font-size: 20px;
-      line-height: 1.4;
-      font-weight: 500;
-
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 18px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 17px;
-      }
-    }
-
-    &-image {
-      width: 50%;
-
-      @media only screen and (max-width: $tablet-l) {
-        width: 55%;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        width: 55%;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        width: 90%;
-      }
-    }
-
-    &__img {
-      width: 100%;
-      height: auto;
-      max-width: 600px;
-    }
+.features__desc {
+  margin: 0;
+  max-width: 540px;
+  
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 20px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: none;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
   }
 }

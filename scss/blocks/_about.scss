@@ -1,177 +1,150 @@
-.about-section {
-  margin-top: 460px;
+.about {
+  padding-top: 350px;
+  
+  @media only screen and (max-width: $desktop) {
+    padding-top: 320px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    padding-top: 300px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    padding-top: 275px;
+  }
+}
+
+.about__inner {
+  background-color: var(--blue);
+  border-radius: 20px;
+  padding: 126px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: url("../images/triangle.svg") no-repeat center / contain;
+    position: absolute;
+    top: -200px;
+    left: 32%;
+    
+    @media only screen and (max-width: $tablet) {
+      width: 100px;
+      height: 100px;
+      top: -270px;
+      left: 0;
+    }
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    padding: 390px 32px 80px 32px;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    padding: 360px 22px 50px 22px;
+  }
+  
+  @media only screen and (max-width: 390px) {
+    padding: 360px 10px 30px 10px;
+  }
+}
+
+.about__content {
+  color: var(--white);
+  max-width: 540px;
+  width: 100%;
+  
+  @media only screen and (max-width: $desktop) {
+    max-width: 480px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 370px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    max-width: 100%;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+.about__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1%;
+  margin-top: 0;
+  margin-bottom: 30px;
+  
+  @media only screen and (max-width: $desktop) {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.about__desc {
+  margin: 0;
 
   @media only screen and (max-width: $tablet-l) {
-    margin-top: 400px;
+    font-size: 20px;
   }
-
+  
   @media only screen and (max-width: $tablet) {
-    margin-top: 300px;
+    font-size: 18px;
+    font-weight: 400;
   }
-
+  
   @media only screen and (max-width: $mobile) {
-    margin-top: 250px;
+    font-size: 16px;
   }
+}
 
-  .about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $blue;
-    border-radius: 20px;
-    padding: 126px 64px;
-    max-height: 480px;
-    position: relative;
-
-    &--payments {
-      background-color: $light;
-      position: relative;
-
-      &::after {
-        content: "";
-        display: inline-block;
-        background: url(../../images/abstract-hero-3.png) no-repeat center;
-        background-size: contain;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        bottom: -250px;
-        right: 0;
-
-        @media only screen and (max-width: $tablet-l) {
-          width: 75px;
-          height: 75px;
-          bottom: -200px;
-        }
-
-        @media only screen and (max-width: $mobile) {
-          display: inline-block;
-          width: 50px;
-          height: 50px;
-          bottom: -105px;
-          left: 0;
-        }
-      }
-    }
-
-    &--payments.about {
-      &::before {
-        display: none;
-      }
-    }
-
-    @media only screen and (max-width: $tablet) {
-      padding: 70px 45px;
-      max-height: 400px;
-    }
-
-    @media only screen and (max-width: $mobile) {
-      padding: 30px 30px;
-      flex-direction: column-reverse;
-      max-height: none;
-    }
-
-    &::before {
-      width: 200px;
-      height: 200px;
-      content: "";
-      display: inline-block;
-      background: url(../../images/abstract-hero.png) no-repeat center;
-      position: absolute;
-      background-size: contain;
-      top: -170px;
-      left: 30%;
-
-      @media only screen and (max-width: $tablet-l) {
-        width: 150px;
-        height: 150px;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        top: -200px;
-      }
-    }
-
-    &-content {
-      width: 50%;
-      color: $white;
-
-      &--payments {
-        color: $black;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        width: 45%;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        width: 90%;
-        text-align: center;
-        transform: translateY(-35px);
-      }
-    }
-
-    &__title {
-      font-size: 50px;
-      line-height: 1.2;
-      margin-bottom: 30px;
-      font-weight: 700;
-
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 40px;
-        margin-bottom: 26px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 30px;
-        margin-bottom: 24px;
-      }
-    }
-
-    &__description {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 1.5;
-
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 18px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 17px;
-      }
-    }
-
-    &-image {
-      width: 40%;
-      text-align: right;
-
-      @media only screen and (max-width: $tablet-l) {
-        width: 50%;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        transform: translateY(-150px);
-        width: 60%;
-      }
-
-      @media only screen and (max-width: 400px) {
-        transform: translateY(-100px);
-      }
-    }
-
-    &__img {
-      width: 100%;
-      height: auto;
-      max-width: none;
-      transform: translateY(-50px);
-
-      @media only screen and (max-width: $tablet-l) {
-        transform: translateY(0);
-      }
-    }
+.about__img {
+  max-width: 495px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  
+  @media only screen and (max-width: $desktop) {
+    max-width: 455px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 405px;
+    bottom: -60px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    max-width: 390px;
+    bottom: auto;
+    top: -30%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    max-width: 350px;
   }
 }

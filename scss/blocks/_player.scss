@@ -1,0 +1,70 @@
+.player {
+  padding-top: 150px;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding-top: 100px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-top: 70px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding-top: 50px;
+  }
+}
+
+.player__inner {
+  position: relative;  
+}
+
+.player__toggler {
+  --black: #fff;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  background: url("../images/icon-play.svg") no-repeat center / contain;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity .5s ease;
+
+  &--pause {
+    background-image: url("../../images/icon-pause.svg");
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    width: 45px;
+    height: 45px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+.player__video {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}

@@ -1,213 +1,175 @@
+/* HERO */
 .hero {
-  color: $black;
-  font-family: "SF Pro Display";
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: url("../images/star.svg") no-repeat center / contain;
+    position: absolute;
+    bottom: 50px;
+    right: 15%;
+
+    @media only screen and (max-width: $tablet-l) {
+      right: 30px;
+      width: 75px;
+      height: 75px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.hero__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  margin-top: 100px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: url("../images/triangle.svg") no-repeat center / contain;
+    position: absolute;
+    top: -210px;
+    right: 26%;
+
+    @media only screen and (max-width: $tablet-l) {
+      width: 100px;
+      height: 100px;
+      top: -100px;
+    }
+    
+    @media only screen and (max-width: $tablet) {
+      top: auto;
+      bottom: 60%;
+      right: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url("../images/silindr.svg") no-repeat center / contain;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+
+    @media only screen and (max-width: $desktop) {
+     left: 0;
+    }
+
+    @media only screen and (max-width: $tablet-l) {
+      bottom: -50px;
+    }
+  
+    @media only screen and (max-width: $tablet) {
+      width: 70px;
+      height: 70px;
+      bottom: 50%;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
   @media only screen and (max-width: $mobile) {
-    flex-direction: column-reverse;
-    margin-top: 50px;
-    gap: 30px;
+    text-align: center;
+  }
+}
+
+.hero__content {
+  background: url("../images/hero-lighten-bg.svg") no-repeat 0 / contain;
+  max-width: 650px;
+  width: 100%;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 400px;
   }
 
-  &-content {
-    width: 60%;
+  @media only screen and (max-width: $tablet) {
+    max-width: 100%;
+  }
+}
 
-    &::before {
-      content: "";
-      background: url(../../images/abstract-hero.png) no-repeat center;
-      background-size: contain;
-      width: 160px;
-      position: absolute;
-      z-index: 1;
-      top: -195px;
-      right: 28%;
-      height: 160px;
-      display: inline-block;
+.hero__title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2%;
+  margin-top: 0;
+  margin-bottom: 24px;
 
-      @media only screen and (max-width: $tablet) {
-        width: 100px;
-        height: 100px;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        top: 250px;
-        right: 0;
-        width: 80px;
-        height: 80px;
-      }
-    }
-
-    &::after {
-      content: "";
-      background: url(../../images/abstract-hero-s.png) no-repeat center;
-      width: 140px;
-      background-size: contain;
-      position: absolute;
-      bottom: -150px;
-      left: -110px;
-      height: 140px;
-      display: inline-block;
-
-      @media only screen and (max-width: $tablet-l) {
-        width: 100px;
-        height: 100px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        display: none;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        left: -10px;
-        top: 300px;
-        bottom: auto;
-      }
-    }
-
-    @media only screen and (max-width: $tablet-l) {
-      width: 54%;
-    }
-
-    @media only screen and (max-width: $tablet) {
-      width: 50%;
-    }
-
-    @media only screen and (max-width: $mobile) {
-      width: 100%;
-      text-align: center;
-    }
+  @media only screen and (max-width: $desktop) {
+    font-size: 65px;
   }
 
-  &__title {
-    font-weight: 700;
-    font-size: 80px;
-    letter-spacing: -0.02em;
-
-    @media only screen and (max-width: $tablet-l) {
-      font-size: 65px;
-    }
-
-    @media only screen and (max-width: $tablet) {
-      font-size: 45px;
-    }
-
-    @media only screen and (max-width: $mobile) {
-      font-size: 32px;
-    }
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 50px;
+    margin-bottom: 20px;
   }
 
-  &__description {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    margin: 24px 0 69px;
+  @media only screen and (max-width: $tablet) {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+}
 
-    @media only screen and (max-width: $tablet-l) {
-      font-size: 22px;
-      line-height: 30px;
-      margin: 20px 0 60px;
-    }
+.hero__desc {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 70px;
 
-    @media only screen and (max-width: $tablet) {
-      font-size: 20px;
-      line-height: 26px;
-      margin: 15px 0 30px;
-    }
-
-    @media only screen and (max-width: $mobile) {
-      font-size: 18px;
-      line-height: 22px;
-      margin: 15px 0 30px;
-
-      br {
-        display: none;
-      }
-    }
+  @media only screen and (max-width: $desktop) {
+    font-size: 22px;
+    margin-bottom: 55px;
   }
 
-  &__link {
-    font-weight: 500;
+  @media only screen and (max-width: $tablet) {
     font-size: 20px;
-    line-height: 24px;
-    color: $white;
-    background: $blue;
-    border-radius: 8px;
-    padding: 18px 40px;
-    display: inline-block;
-    letter-spacing: -0.01em;
-
-    @media only screen and (max-width: $mobile) {
-      font-size: 16px;
-      padding: 10px 30px;
-    }
+    margin-bottom: 40px;
   }
 
-  &-image {
-    background: url(../../images/hero-image.png) no-repeat center;
-    width: 50%;
-    height: 700px;
-    position: absolute;
-    top: -170px;
-    z-index: 2;
-    right: -15px;
-    background-size: contain;
+  @media only screen and (max-width: $mobile) {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+}
 
-    @media only screen and (max-width: $tablet) {
-      width: 55%;
-    }
+.hero__image {
+  max-width: 500px;
+  position: absolute;
+  top: -150px;
+  right: -60px;
+  width: 100%;
+  height: auto;
 
-    @media only screen and (max-width: $mobile) {
-      position: static;
-      width: 100%;
-      height: 400px;
-    }
+  @media only screen and (max-width: $desktop) {
+    max-width: 450px;
+    right: 0;
+  }
 
-    &::before {
-      content: "";
-      background: url(../../images/hero-ellipse.png) no-repeat center;
-      background-size: contain;
-      width: 100%;
-      height: 800px;
-      position: absolute;
-      left: -100%;
+  @media only screen and (max-width: $tablet-l) {
+    top: -120px;
+    max-width: 400px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    top: 0;
+    position: static;
+  }
 
-      @media only screen and (max-width: $tablet) {
-        height: 500px;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        height: 300px;
-        left: 0;
-        bottom: -10%;
-      }
-    }
-
-    &::after {
-      content: "";
-      background: url(../../images/abstract-hero-3.png) no-repeat center;
-      width: 140px;
-      position: absolute;
-      background-size: contain;
-      bottom: 0;
-      right: 15px;
-      height: 140px;
-      display: inline-block;
-
-      @media only screen and (max-width: $tablet) {
-        width: 100px;
-        height: 100px;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        width: 50px;
-        height: 50px;
-      }
-    }
+  @media only screen and (max-width: $mobile) {
+    max-width: 300px;
   }
 }

@@ -13,174 +13,182 @@
 
   <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="site-header">
       <div class="container">
-        <div class="header">
-          <div class="logo">
-            <a href="./index.html" class="logo__link">
-              <img
-                src="./images/logo.svg"
-                alt="logo tingla site"
-                width="130"
-                class="logo__img"
-              />
-            </a>
-          </div>
-        </div>
+        <a href="/" class="logo">
+          <img
+            class="logo__img"
+            src="images/logo.svg"
+            alt="Tingla logo"
+            width="130"
+            height="39"
+          />
+        </a>
       </div>
     </header>
     <!-- /Header -->
 
-    <!-- Main content -->
-    <main class="main">
-      <!-- Hero section -->
-      <section class="hero-section">
-        <div class="container">
-          <div class="hero">
-            <div class="hero-content">
-              <h2 class="hero__title">Biz bilan har lahza<br />—unumli</h2>
-              <p class="hero__description">
-                Tingla ilovasi orqali nodir asarlarning audio shaklida
-                tinlashingiz va <br />
-                elektron tarzda mutolaa qilishingiz mumkin.
-              </p>
-              <a href="#" class="hero__link">Yuklab olish</a>
-            </div>
-            <div class="hero-image"></div>
+    <!-- MAIN -->
+    <main class="main-content">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h2 class="hero__title">Biz bilan har lahza<br />—unumli</h2>
+            <p class="hero__desc">
+              Tingla ilovasi orqali nodir asarlarning audio shaklida
+              tinlashingiz va elektron tarzda mutolaa qilishingiz mumkin.
+            </p>
+            <a class="hero__link button" href="#">Yuklab olish</a>
           </div>
+          <img
+            class="hero__image"
+            src="images/hero-img.png"
+            alt="Application image"
+            width="514"
+            height="729"
+            srcset="images/hero-img.png 1x, images/hero-img@2x.png 2x"
+          />
         </div>
       </section>
-      <!-- /Hero section -->
+      <!-- /HERO -->
 
-      <!-- Trailer video section -->
-      <section class="trailer-section">
+      <!-- PLAYER -->
+      <section class="player">
+        <div class="container player__inner">
+          <video
+            class="player__video"
+            src="media/iphone-11-presentation.mp4"
+            data-player-video
+          ></video>
+          <button
+            class="player__toggler"
+            type="button"
+            data-video-toggler
+          ></button>
+        </div>
+      </section>
+      <!-- /PLAYER -->
+
+      <!-- ABOUT -->
+      <section class="about">
         <div class="container">
-          <div class="trailer">
+          <div class="about__inner">
+            <div class="about__content">
+              <h2 class="about__title">Loyiha haqida</h2>
+              <p class="about__desc">
+                Yangi ko’rinishdagi va ajoyib g’oya bilan qilingan Tingla
+                ilovasi sizga muntazir. Ushbu ilova orqali siz o’zbek va jahon
+                adabiyotidagi shoh asarlarni elektron shaklda bepul o’qishingiz
+                va audio tarzda tinglashingiz mumkin.
+              </p>
+            </div>
             <img
-              src="./images/trailer-image.png"
-              alt="player"
-              class="player-thumb"
+              class="about__img"
+              src="images/about-img.png"
+              alt="Application screenshot"
+              width="495"
+              height="773"
+              srcset="images/about-img.png 1x, images/about-img@2x.png 2x"
             />
-            <img src="./images/PlayCircle.png" alt="player" class="player" />
           </div>
         </div>
       </section>
-      <!-- /Trailer video section -->
+      <!-- /ABOUT -->
 
-      <!-- About section -->
-      <section class="about-section">
+      <!-- FEATURES -->
+      <section class="features">
+        <div class="container features__inner">
+          <img
+            class="features__img"
+            src="images/features-img.png"
+            alt="Application audio"
+            width="600"
+            height="571"
+            srcset="images/features-img.png 1x, images/features-img@2x.png 2x"
+          />
+          <div class="features__content">
+            <h2 class="features__title">Audio-kitobning afzalliklari</h2>
+            <p class="features__desc">
+              O’zingizga ma’qul bo’lgan audio-kitoblarni turli xil holatlarda,
+              istalgan joyda tinglashingiz mumkin. Audio-kitoblarga to’lov
+              qilganingizdan so’ng ularni istalgancha foydalanishingiz mumkin.
+              Telefon xotirasiga yuklash, ilova xotirasiga saqlash va audioning
+              tezligini o’zgartirish imkoniyatlari mavjud.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /FEATURES -->
+
+      <!-- PAYMENT -->
+      <section class="payment">
         <div class="container">
-          <div class="about">
-            <div class="about-content">
-              <h2 class="about__title">Loyiha haqida</h2>
-              <p class="about__description">
-                Yangi ko’rinishdagi va ajoyib g’oya bilan qilingan Tingla
-                ilovasi sizga muntazir. Ushbu ilova orqali siz o’zbek va jahon
-                adabiyotidagi shoh asarlarni elektron shaklda bepul o’qishingiz
-                va audio tarzda tinglashingiz mumkin.
+          <div class="payment__inner">
+            <div class="payment__conent">
+              <h2 class="payment__title">To’lov tizimi</h2>
+              <p class="payment__desc">
+                “Tingla” ilovasidagi audio-kitoblarni tinglashingiz uchun ma’lum
+                summadagi to’lovni amalga oshirishigiz zarur. To’lovlar “Payme”
+                yoki “Visa” to’lov tizimlari orqali amalga oshiriladi. To’lov
+                muvaffaqiyatli qabul qilinganidan so’ng audio-kitobni
+                tinglashingiz mumkin bo’ladi
               </p>
             </div>
-            <div class="about-image">
-              <img
-                src="./images/about-image.png"
-                alt="about section iphone image"
-                width="333"
-                height="673"
-                class="about__img"
-              />
-            </div>
+            <img
+              class="payment__img"
+              src="images/payment-img.png"
+              alt="Application payment"
+              width="412"
+              height="791"
+              srcset="images/payment-img.png 1x, images/payment-img@2x.png 2x"
+            />
           </div>
         </div>
       </section>
-      <!-- /About section -->
+      <!-- /PAYMENT -->
 
-      <!-- Features section -->
-      <section class="features-section">
+      <!-- DOWNLOAD -->
+      <section class="download">
         <div class="container">
-          <div class="features">
-            <div class="features-image">
+          <div class="download__inner">
+            <div class="download__img-wrapper">
               <img
-                src="./images/features-image.png"
-                alt="audio book screenshot image"
-                width="600"
-                height="571"
-                class="features__img"
-              />
+              class="download__img"
+              src="images/download-img.png"
+              alt="Download application"
+              width="394"
+              height="480"
+              srcset="images/download-img.png 1x, images/download-img@2x.png 2x"
+            />
             </div>
-            <div class="features-content">
-              <h2 class="features__title">Audio-kitobning afzalliklari</h2>
-              <p class="features__description">
-                O’zingizga ma’qul bo’lgan audio-kitoblarni turli xil holatlarda,
-                istalgan joyda tinglashingiz mumkin. Audio-kitoblarga to’lov
-                qilganingizdan so’ng ularni istalgancha foydalanishingiz mumkin.
-                Telefon xotirasiga yuklash, ilova xotirasiga saqlash va
-                audioning tezligini o’zgartirish imkoniyatlari mavjud.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Features section -->
-
-      <!-- About section -->
-      <section class="about-section about-section--payments">
-        <div class="container">
-          <div class="about about--payments">
-            <div class="about-content about-content--payments">
-              <h2 class="about__title">Loyiha haqida</h2>
-              <p class="about__description">
-                Yangi ko’rinishdagi va ajoyib g’oya bilan qilingan Tingla
-                ilovasi sizga muntazir. Ushbu ilova orqali siz o’zbek va jahon
-                adabiyotidagi shoh asarlarni elektron shaklda bepul o’qishingiz
-                va audio tarzda tinglashingiz mumkin.
-              </p>
-            </div>
-            <div class="about-image">
-              <img
-                src="./images/payments-image.png"
-                alt="about section iphone image"
-                width="341"
-                height="692"
-                class="about__img"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /About section -->
-
-      <!-- Downloads section -->
-      <section class="downloads-section">
-        <div class="container">
-          <div class="downloads">
-            <div class="downloads-image">
-              <img
-                src="./images/downloads-image.png"
-                alt=""
-                class="downloads__img"
-              />
-            </div>
-            <div class="downloads-content">
-              <h2 class="downloads__title">
-                Kitob o’qishdan rohatlaning. Hoziroq yuklab oling
+            <div class="download__info">
+              <h2 class="download__title">
+                Kitob o’qishdan rohatlaning.<br />Hoziroq yuklab oling
               </h2>
-              <div class="downloads-socials">
-                <a href="#" class="downloads-socials__google-play">
+              <div class="download__links">
+                <a
+                  class="download__link"
+                  href="https://tme.to/suhrobbek_soatov"
+                >
                   <img
-                    src="./images/google-play-image.png"
-                    alt=""
+                    class="download__link-img"
+                    src="images/badge-google-play.svg"
                     width="162"
-                    height="48"
-                    class="download-socials__google-play-img"
+                    height="47"
+                    alt="badge google-play"
                   />
                 </a>
-                <a href="#" class="downloads-socials__app-store">
+                <a
+                  class="download__link"
+                  href="https://tme.to/suhrobbek_soatov"
+                >
                   <img
-                    src="./images/app-store-image.png"
-                    alt=""
+                    class="download__link-img"
+                    src="images/badge-app-store.svg"
                     width="162"
-                    height="48"
-                    class="download-socials__app-store-img"
+                    height="47"
+                    alt="badge app-store"
                   />
                 </a>
               </div>
@@ -188,9 +196,87 @@
           </div>
         </div>
       </section>
-      <!-- /Downloads section -->
+      <!-- /DOWNLOAD -->
     </main>
-    <!-- /Main content -->
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container site-footer__container">
+        <div class="site-footer__info">
+          <!-- LOGO -->
+          <a class="site-footer__logo logo" href="/">
+            <img
+              class="logo__img"
+              src="images/logo.svg"
+              alt="Tingla logo"
+              width="130"
+              height="39"
+            />
+          </a>
+          <!-- /LOGO -->
+          <p class="site-footer__copyright">Barcha huquqlar himoyalangan</p>
+        </div>
+
+        <nav class="site-footer__nav">
+          <ul class="site-footer__list">
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Maxfiylik siyosati</a>
+            </li>
+
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Ommaviy oferta</a>
+            </li>
+
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Foydalanish qoidalari</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__contact contact-footer">
+          <div class="contact-footer__phone">
+            <img
+              class="contact-footer__phone-img"
+              src="images/icon-phone.svg"
+              alt="icon phone"
+              width="24"
+              height="24"
+            />
+            <div class="contact-footer__phone-inner">
+              <span class="contact-footer__phone-label">Telefon raqam</span>
+              <a class="contact-footer__phone-link" href="tel:+998999911525"
+                >+998 99 991-15-25</a
+              >
+            </div>
+          </div>
+          <div class="contact-footer__socials">
+            <a class="contact-footer__social" href="#">
+              <img
+                class="contact-footer__social-img"
+                src="images/icon-telegram.svg"
+                alt="telegram icon"
+              />
+            </a>
+            <a class="contact-footer__social" href="#">
+              <img
+                class="contact-footer__social-img"
+                src="images/icon-instagram.svg"
+                alt="instagram icon"
+              />
+            </a>
+            <a class="contact-footer__social" href="#">
+              <img
+                class="contact-footer__social-img"
+                src="images/icon-facebook.svg"
+                alt="facebook icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
 
     <script src="./js/main.js"></script>
   </body>

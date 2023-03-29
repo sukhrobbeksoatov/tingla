@@ -1,12 +1,15 @@
 // Customize
-@import "./variables";
-@import "./mixins";
+@import "variables";
+@import "mixins";
+@import "fonts";
 
 // Blocks
-@import "./blocks/common";
-@import "./blocks/header";
-@import "./blocks/hero";
-@import "./blocks/trailer";
-@import "./blocks/about";
-@import "./blocks/features";
-@import "./blocks/downloads";
+@import "blocks/general";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/player";
+@import "blocks/about";
+@import "blocks/features";
+@import "blocks/payment";
+@import "blocks/download";
+@import "blocks/footer";

@@ -1,0 +1,115 @@
+/* CUSTOM PROPS */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --half-white: #ffffff85;
+  --gray: #000000;
+  --blue: #0F0F54;
+  --light: #F9E0C7;
+  --lighter-gray: #F8F8F8;
+}
+
+
+/* GENERAL */
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dashed var(--black);
+  outline-offset: 3px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "SF Pro Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  background: url("../images/desktop-line.png") repeat-y center;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $mobile) {
+    background-image: url("../images/line-mobile.png");
+  }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* MAIN */
+.main-content {
+  flex-grow: 1;
+  padding: 90px 0 106px;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 60px 0 80px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 40px 0 60px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 20px 0 40px;
+  }
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 18px 40px;
+  color: var(--white);
+  background-color: var(--blue);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+/* LOGO */
+.logo {
+  display: inline-flex;
+}
+
+.logo__img {
+  max-width: 130px;
+  width: 100%;
+  height: auto;
+
+    @media only screen and (max-width: 400px) {
+        max-width: 115px;
+      }
+}

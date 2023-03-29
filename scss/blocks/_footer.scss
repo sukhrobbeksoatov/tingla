@@ -1,0 +1,136 @@
+/* FOOTER */
+.site-footer {
+  padding: 64px 0;
+  position: relative;
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: flex-start;
+  
+  @media only screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.site-footer__info {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.site-footer__logo {
+  margin-bottom: 45px;
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.site-footer__copyright {
+  font-size: 14px;
+  opacity: 0.5;
+  
+  @media only screen and (max-width: $tablet) {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+/* FOOTER NAV */
+.site-footer__nav {
+  flex-grow: 1;
+  margin-right: 30px;
+  
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+    display: block;
+    order: 1;
+    flex-grow: 0;
+  }
+}
+
+.site-footer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.site-footer__link {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--black);
+}
+
+/* FOOTER CONTACT */
+.contact-footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    flex-grow: 0;
+  }
+}
+
+.contact-footer__phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+}
+
+.contact-footer__phone-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.contact-footer__phone-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-footer__phone-label {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.contact-footer__phone-link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+.contact-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 39px;
+    justify-content: flex-end;
+  }
+}
+
+.contact-footer__social {
+  display: inline-flex;
+  border-radius: 50%;
+}
+
+.contact-footer__social-link {
+  width: 24px;
+  height: 24px;
+}

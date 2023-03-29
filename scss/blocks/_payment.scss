@@ -1,0 +1,152 @@
+.payment {
+  padding-top: 360px;
+  
+  @media only screen and (max-width: $desktop) {
+    padding-top: 300px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    padding-top: 280px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    padding-top: 230px;
+  }
+}
+
+.payment__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light);
+  position: relative;
+  border-radius: 20px;
+  padding: 110px 61px;
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: url("../images/star.svg") no-repeat center / contain;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    transform: translateY(170%);
+    
+    @media only screen and (max-width: $tablet) {
+      width: 75px;
+      height: 75px;
+      right: auto;
+      left: 0;
+    }
+    
+    @media only screen and (max-width: $mobile) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    padding: 390px 32px 80px 32px;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    padding: 360px 22px 50px 22px;
+  }
+  
+  @media only screen and (max-width: 390px) {
+    padding: 360px 10px 30px 10px;
+  }
+}
+
+.payment__conent {
+  max-width: 540px;
+  width: 100%;
+  
+  @media only screen and (max-width: $desktop) {
+    max-width: 480px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 370px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    max-width: 100%;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+.payment__title {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 30px;
+  
+  @media only screen and (max-width: $desktop) {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.payment__desc {
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 20px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+.payment__img {
+  max-width: 412px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: - 100px;
+  
+  @media only screen and (max-width: $desktop) {
+    max-width: 390px;
+  }
+  
+  @media only screen and (max-width: $tablet-l) {
+    max-width: 320px;
+    bottom: -60px;
+  }
+  
+  @media only screen and (max-width: $tablet) {
+    max-width: 290px;
+    bottom: auto;
+    top: -30%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    max-width: 270px;
+  }
+}
