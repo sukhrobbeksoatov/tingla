@@ -203,10 +203,12 @@ body {
     right: 30px;
     width: 75px;
     height: 75px;
+    bottom: 100px;
   }
 }
 @media only screen and (max-width: 768px) {
   .hero::after {
+    bottom: 0;
     right: 0;
     width: 50px;
     height: 50px;
@@ -225,7 +227,7 @@ body {
   height: 150px;
   background: url("../images/triangle.svg") no-repeat center/contain;
   position: absolute;
-  top: -210px;
+  top: -270px;
   right: 26%;
 }
 @media only screen and (max-width: 992px) {
@@ -249,7 +251,7 @@ body {
   height: 100px;
   background: url("../images/silindr.svg") no-repeat center/contain;
   position: absolute;
-  bottom: 0;
+  bottom: -170px;
   left: -100px;
 }
 @media only screen and (max-width: 1240px) {
@@ -259,7 +261,7 @@ body {
 }
 @media only screen and (max-width: 992px) {
   .hero__inner::after {
-    bottom: -50px;
+    bottom: -100px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -381,21 +383,21 @@ body {
 }
 
 .player {
-  padding-top: 150px;
+  padding-top: 250px;
 }
 @media only screen and (max-width: 992px) {
   .player {
-    padding-top: 100px;
+    padding-top: 170px;
   }
 }
 @media only screen and (max-width: 768px) {
   .player {
-    padding-top: 70px;
+    padding-top: 120px;
   }
 }
 @media only screen and (max-width: 576px) {
   .player {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 }
 
@@ -425,14 +427,6 @@ body {
 .player__toggler--pause {
   background-image: url("../../images/icon-pause.svg");
 }
-.player__toggler.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.player__toggler:hover {
-  opacity: 1;
-  pointer-events: auto;
-}
 @media only screen and (max-width: 768px) {
   .player__toggler {
     width: 45px;
@@ -451,6 +445,16 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .player__video {
+    border-radius: 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .player__video {
+    border-radius: 10px;
+  }
 }
 
 .about {

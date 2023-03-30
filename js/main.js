@@ -37,13 +37,3 @@ document.addEventListener("click", onVideoToggleClick);
 video.addEventListener("ended", () => {
   video.nextElementSibling.classList.remove("player__toggler--pause");
 });
-
-if (window.innerWidth > 768) {
-  video.addEventListener("mouseover", () => {
-    video.nextElementSibling.classList.remove("hidden");
-  });
-
-  video.addEventListener("mouseout", () => {
-    video.nextElementSibling.classList.add("hidden");
-  });
-}

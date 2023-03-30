@@ -1,21 +1,21 @@
 .player {
-  padding-top: 150px;
+  padding-top: 250px;
 
   @media only screen and (max-width: $tablet-l) {
-    padding-top: 100px;
+    padding-top: 170px;
   }
 
   @media only screen and (max-width: $tablet) {
-    padding-top: 70px;
+    padding-top: 120px;
   }
 
   @media only screen and (max-width: $mobile) {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 }
 
 .player__inner {
-  position: relative;  
+  position: relative;
 }
 
 .player__toggler {
@@ -35,20 +35,10 @@
   background: url("../images/icon-play.svg") no-repeat center / contain;
   opacity: 1;
   pointer-events: auto;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 
   &--pause {
     background-image: url("../../images/icon-pause.svg");
-  }
-
-  &.hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &:hover {
-    opacity: 1;
-    pointer-events: auto;
   }
 
   @media only screen and (max-width: $tablet) {
@@ -62,9 +52,16 @@
   }
 }
 
-
 .player__video {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
+
+  @media only screen and (max-width: $tablet) {
+    border-radius: 15px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    border-radius: 10px;
+  }
 }
