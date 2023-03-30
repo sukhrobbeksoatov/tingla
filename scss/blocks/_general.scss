@@ -1,14 +1,13 @@
 /* CUSTOM PROPS */
 :root {
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --half-white: #ffffff85;
   --gray: #000000;
-  --blue: #0F0F54;
-  --light: #F9E0C7;
-  --lighter-gray: #F8F8F8;
+  --blue: #0f0f54;
+  --light: #f9e0c7;
+  --lighter-gray: #f8f8f8;
 }
-
 
 /* GENERAL */
 html {
@@ -17,7 +16,9 @@ html {
   scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -96,8 +97,22 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-}
 
+  @media only screen and (max-width: $tablet-l) {
+    padding: 16px 36px;
+    font-size: 19px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 14px 30px;
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
 
 /* LOGO */
 .logo {
@@ -109,7 +124,7 @@ body {
   width: 100%;
   height: auto;
 
-    @media only screen and (max-width: 400px) {
-        max-width: 115px;
-      }
+  @media only screen and (max-width: 400px) {
+    max-width: 115px;
+  }
 }
