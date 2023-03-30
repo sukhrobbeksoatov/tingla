@@ -37,8 +37,18 @@
   pointer-events: auto;
   transition: opacity 0.5s ease;
 
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   &--pause {
     background-image: url("../../images/icon-pause.svg");
+  }
+
+  &:hover {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   @media only screen and (max-width: $tablet) {
